@@ -1012,7 +1012,7 @@
             // 
             // microphoneToolStripMenuItem
             // 
-            this.microphoneToolStripMenuItem.Image = global::Server.Properties.Resources.microphone;
+            //this.microphoneToolStripMenuItem.Image = global::Server.Properties.Resources.microphone;
             this.microphoneToolStripMenuItem.Name = "microphoneToolStripMenuItem";
             this.microphoneToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.microphoneToolStripMenuItem.Text = "Microphone";
