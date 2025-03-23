@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/st2o1/AsyncRAT-w-microphone/refs/heads/master/mic_screen_1.PNG">
 
-# AsyncRAT
+# Feature
 This repository contains the source code and release of AsyncRAT with MICROPHONE support. There are some problems with changing RATE so leave it at 44100. This is just a hobby project so please put a star on it.
 ### Library used
 [NAUDIO Lib](https://github.com/naudio/NAudio)
