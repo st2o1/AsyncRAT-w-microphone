@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{7767C300-5FD5-4A5D-9D4C-59559CCE48A3}"
 EndProject
@@ -39,6 +39,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSearcher", "Plugin\FileSearcher\FileSearcher\FileSearcher.csproj", "{9D1D39D8-2387-46ED-A4A8-59D250C97F35}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePackLib", "MessagePack\MessagePackLib.csproj", "{DC199D9E-CF10-41DD-BBCD-98E71BA8679D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audio", "Plugin\Audio\Audio\Audio.csproj", "{B9FEAFFB-1B65-491D-AE6C-5A03ED73E91B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +112,10 @@ Global
 		{DC199D9E-CF10-41DD-BBCD-98E71BA8679D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC199D9E-CF10-41DD-BBCD-98E71BA8679D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC199D9E-CF10-41DD-BBCD-98E71BA8679D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FEAFFB-1B65-491D-AE6C-5A03ED73E91B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FEAFFB-1B65-491D-AE6C-5A03ED73E91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FEAFFB-1B65-491D-AE6C-5A03ED73E91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FEAFFB-1B65-491D-AE6C-5A03ED73E91B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +134,7 @@ Global
 		{8DE42DA3-BE99-4E7E-A3D2-3F65E7C1ABCE} = {0DE8DA5D-061D-4649-8A56-48729CF1F789}
 		{0E423DD6-FAAF-4A66-8828-6A5A5F22269B} = {0DE8DA5D-061D-4649-8A56-48729CF1F789}
 		{9D1D39D8-2387-46ED-A4A8-59D250C97F35} = {0DE8DA5D-061D-4649-8A56-48729CF1F789}
+		{B9FEAFFB-1B65-491D-AE6C-5A03ED73E91B} = {0DE8DA5D-061D-4649-8A56-48729CF1F789}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9F2462F-603A-41C4-9CFC-1FAC60B4731C}

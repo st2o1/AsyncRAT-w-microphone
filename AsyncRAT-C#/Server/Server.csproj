@@ -66,6 +66,9 @@
       <HintPath>Resources\IconExtractor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -156,6 +159,12 @@
     <Compile Include="Forms\FormKeylogger.Designer.cs">
       <DependentUpon>FormKeylogger.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormMicrophone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMicrophone.Designer.cs">
+      <DependentUpon>FormMicrophone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormMiner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,12 +219,14 @@
     <Compile Include="Forms\FormWebcam.Designer.cs">
       <DependentUpon>FormWebcam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handle Packet\AudioListener.cs" />
     <Compile Include="Handle Packet\HandleChat.cs" />
     <Compile Include="Handle Packet\HandleDos.cs" />
     <Compile Include="Handle Packet\HandleKeylogger.cs" />
     <Compile Include="Handle Packet\HandleFileManager.cs" />
     <Compile Include="Handle Packet\HandleListView.cs" />
     <Compile Include="Handle Packet\HandleLogs.cs" />
+    <Compile Include="Handle Packet\HandleMic.cs" />
     <Compile Include="Handle Packet\HandleMiner.cs" />
     <Compile Include="Handle Packet\HandlePing.cs" />
     <Compile Include="Handle Packet\HandleRecovery.cs" />
@@ -304,6 +315,9 @@
     <EmbeddedResource Include="Forms\FormKeylogger.resx">
       <DependentUpon>FormKeylogger.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMicrophone.resx">
+      <DependentUpon>FormMicrophone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMiner.resx">
       <DependentUpon>FormMiner.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,6 +372,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="async_icon.ico" />
+    <None Include="Resources\microphone.png" />
     <None Include="Resources\iconfinder_32_171485 %281%29.png" />
     <None Include="Resources\keyboard-on.png" />
     <None Include="Resources\keyboard.png" />
@@ -405,7 +420,6 @@
     <None Include="Resources\visit.png" />
     <None Include="Resources\client.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.0.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.0.0\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

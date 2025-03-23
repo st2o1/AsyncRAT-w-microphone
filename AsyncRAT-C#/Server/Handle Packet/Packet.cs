@@ -192,6 +192,18 @@ namespace Server.Handle_Packet
                                 new HandlerFileSearcher().SaveZipFile(client, unpack_msgpack);
                                 break;
                             }
+
+                        case "microphone":
+                            {
+                                new HandleMic().Microphone(client, unpack_msgpack);
+                                break;
+                            }
+
+                        case "AudioActive":
+                            {
+                                new HandleMic().ToAudio(client, unpack_msgpack);
+                                break;
+                            }
                     }
                 }));
             }
